@@ -18,7 +18,6 @@ COPY --from=node-build ./frontend/dist ./flaskr/vite
 RUN pip install --upgrade pip
 RUN pip install -r flaskr/requirements.txt
 
-EXPOSE 5000
 EXPOSE 80
 
 CMD python -m flask --app flaskr --debug run --host 0.0.0.0 --port 80
